@@ -1,0 +1,15 @@
+import time
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(35, GPIO.OUT)
+##GPIO.setup(12, GPIO.OUT)
+GPIO.setup(37, GPIO.OUT)
+GPIO.setup(33, GPIO.OUT)
+p= GPIO.PWM(33,60)
+p.start(20)
+GPIO.output(35,1)
+time.sleep(10)
+GPIO.output(35,0)
+##time.sleep(1)
+##GPIO.output(38,False)
+GPIO.cleanup()
